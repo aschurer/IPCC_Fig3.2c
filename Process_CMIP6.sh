@@ -1,0 +1,7 @@
+#!/bin/bash
+cd $1/CMIP6/RawData
+mkdir -p $1/CMIP6/ProcessedData
+
+ncrcat tas_Amon_MRI-ESM2-0_past1000_r1i1p1f1_gn_085001-184912.nc tas_Amon_MRI-ESM2-0_historical_r1i1000p1f1_gn_185001-201412.nc ../ProcessedData/tas_Amon_MRI-ESM2-0_past1000historical_r1i1000p1f1_gn_085001-201412.nc
+
+ncrcat tas_Amon_MIROC-ES2L_past1000_r1i1p1f2_gn_085001-104912.nc tas_Amon_MIROC-ES2L_past1000_r1i1p1f2_gn_105001-124912.nc tas_Amon_MIROC-ES2L_past1000_r1i1p1f2_gn_125001-144912.nc tas_Amon_MIROC-ES2L_past1000_r1i1p1f2_gn_145001-164912.nc tas_Amon_MIROC-ES2L_past1000_r1i1p1f2_gn_165001-184912.nc tas_Amon_MIROC-ES2L_historical_r1i1000p1f2_gn_185001-201412.nc ../ProcessedData/tas_Amon_MIROC-ES2L_past1000historical_r1i1p1f2_gn_085001-201412.nc

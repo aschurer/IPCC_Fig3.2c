@@ -1,0 +1,32 @@
+Scripts created by Andrew Schurer 22/03/2021
+These scripts are written in a mix of python3 and shell.
+To run the scripts requires several python packages, in particular the iris package:
+https://scitools-iris.readthedocs.io/en/stable/
+The scripts were designed to run in a linux environement. 
+Some of the pathnames will have to be modified if running it in Windows.
+
+To run the scripts requires the user to create a main directory which includes the directories:
+CMIP5, CMIP6, CESM_LME, PAGES2K, Volcanic
+
+In each of the model directories (CMIP5, CMIP6, CESM_LME) the user must create a RAWDATA directory.
+The RAWDATA directories need to be filled with the model data listed in MODELDATA.txt
+
+Alternatively the global mean surface air temperature timeseries can be downloaded and placed in the SavedModelData folder.
+To produce the figure using these files the Process_CMIP5.sh, Process_CMIP6.sh and Process_CESM.sh scripts don't need to be run.
+And processMODDATA in plot_past1000.py should be set to False
+
+The PAGES2K directory must contain the 7 text reconstruction files downlaoded from:
+https://figshare.com/collections/Global_mean_temperature_reconstructions_over_the_Common_Era/4507043
+BHM.txt, CPS.txt, DA.txt, M08.txt, OIE.txt, PAI.txt, PCR.txt
+
+The Volcanic directory needs to contain three directories.
+CMIP6, Gao, Crowley, and each must contain the relenvent volcainc reconstruction.
+volcanic_sAOD_monthly_-50001-201912_new.csv
+From https://github.com/chrisroadmap/ar6/tree/main/data_output
+IVI2LoadingLatHeight501-2000.txt
+From http://climate.envsci.rutgers.edu/IVI2/
+ICI5_030N_AOD_c.txt, ICI5_030S_AOD_c.txt, ICI5_3090N_AOD_c.txt, ICI5_3090S_AOD_c.txt
+From https://wiki.lsce.ipsl.fr/pmip3/doku.php/pmip3:design:lm:final#volcanic_forcings
+
+Once the directory structure is set-up and all the datasets are downloaded, create the figure with the command.
+Create_plot.sh Path_to_main_directory
