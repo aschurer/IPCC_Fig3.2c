@@ -30,3 +30,6 @@ From https://wiki.lsce.ipsl.fr/pmip3/doku.php/pmip3:design:lm:final#volcanic_for
 
 Once the directory structure is set-up and all the datasets are downloaded, create the figure with the command.
 Create_plot.sh Path_to_main_directory
+
+To run plot_past1000_TS.py the command is:
+python3 plot_past1000_TS.py Path_to_main_directory
