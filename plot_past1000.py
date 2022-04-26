@@ -348,7 +348,7 @@ for idx,filename in enumerate(filenames):
 	else:
 		if 'CCSM4' in filename:
 			plt.plot(years[rmidx:-rmidx],CMIP5data[rmidx:-rmidx],'skyblue',lw=lw)
-		elif 'BCC' in filename:
+		elif 'bcc' in filename:
 			plt.plot(years[rmidx:-rmidx],CMIP5data[rmidx:-rmidx],'skyblue',lw=lw)
 		else:
 			plt.plot(years[rmidx:-rmidx],CMIP5data[rmidx:-rmidx],'lightgreen',lw=lw)	
